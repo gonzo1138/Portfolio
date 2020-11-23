@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/stylesheet.css">
+		<script language="JavaScript" type="text/javascript"  src="./js/console.js"></script>
+		<title>Portfolio</title>
+	</head>
+		
+	<body>
+		<div id="spacer"></div>
+		
+		<div id="consolewindow">
+			<div id="consoleheader"></div>
+			<div id="consoleframe">
+				<div id="console" class="boxes">
+					<!-- place to copy nodes to (child of #console) -->
+				</div>
+				<div id="prompt" class="boxes">
+					<form id="cmd">
+						<p>$ <input id="cmdin" autofocus type="text" autocomplete="off" size="42"/></p>
+					</form>
+				</div>
+			</div>
+
+			<!-- invisible nodes to copy: -->
+			<div>
+				<div id="help" class="orders">
+					<p>Try the following commands and discover more:<br></p>
+					<table>
+						<colgroup>
+							<col width="120">
+							<col width="*">
+						</colgroup>
+						<tr>
+							<td><a href="#" onclick="append('about');">[about]</a></td>
+							<td>read about my person</td>
+						</tr>
+						<tr>
+							<td><a href="#" onclick="append('projects');">[projects]</a></td>
+							<td>read about my projects</td>
+						</tr>
+						<!--<tr>
+							<td><a href="#" onclick="append('language');">[language]</a></td>
+							<td>switch language between german and english</td>
+						</tr>
+						<tr>
+							<td><a href="#" onclick="append('asdf');">[...]</a></td>
+							<td>...</td>
+						</tr> -->
+						<tr>
+							<td><a href="#" onclick="append('exit');">[exit]</a></td>
+							<td>close this site</td>
+						</tr>
+					</table>
+					<br>
+				</div>
+
+				<div id="about" class="orders">
+					<p>
+						Hi!<br>
+						My Name is Thomas Weyand. I’m a student at the <a href="https://www.medienberufe.de/" class="links" target="_blank">[bm]</a> institute in cologne.<br>
+						I’ve been working with computers for more than 20 years in several jobs and employments.<br>
+						If the assignment was centered at the userinterface, I always tried to find the best solution for the machine, to not attract any anxiety by it’s user.<br>
+						<br>
+					</p>
+				</div>
+
+				<div id="projects" class="orders">
+					<p>
+						As I have not done any public programming projects yet, despite my sparse <a href="https://github.com/gonzo1138" class="links" target="_blank">[github]</a> repositories, that are mostly for educational purposes, this section will continuosly fill up with nice things. Previous projects were problem-specific solutions for clients, like command prompt-scripts for automation like data-distribution and python-programs for data-processing.<br>
+						I have also done some <a href="#" onclick="append('websites');">[websites]</a> in the past, which are currently being reworked.<br>
+						<br>
+					</p>
+				</div>
+
+				<div id="websites" class="orders">
+					<table>
+						<colgroup>
+							<col width="120">
+							<col width="*">
+						</colgroup>
+						<tr>
+							<td><a href="http://www.radioweyand.de" class="links" target="_blank">[rw]</a></td>
+							<td>Radio Weyand-Website, build around 2008.</td>
+						</tr>
+					</table>
+					<br>
+				</div>
+
+				<div id="exit" class="orders">
+					<p>Thank you for visiting and come back some time for updates!<br><br></p>
+				</div>
+
+				<div id="error" class="orders">
+					<p>The command you entered was not found.<br></p>
+				</div>
+
+				<div id="welcome" class="orders">
+					<p>Welcome to my Portfolio-console!<br>
+						<br>
+						Try <a href="#" onclick="append('help');">[help]</a> for a list of commands.<br>
+						<br>
+					</p>
+				</div>
+
+				<div id="promptmessage" class="orders">
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>
