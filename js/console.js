@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler, mit }); am Ende
 //window.onload = function(){                                            // als Funktion, mit } am Ende
 
+
     // EVENTHANDLER:
     // =============
 
@@ -10,13 +11,20 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
     cmd.addEventListener('keydown', keyhandler);                     // Eventhandler für Tastendruck
     cmd.addEventListener('keyup', shifthandler);                     // Eventhandler für das loslassen einer Taste (für den Fall dass SHIFT involviert ist)
     cmd.addEventListener('input', setinput);                         // Eventhandler für Änderung im Eingabefeld (vollständig, da auswertung nach Keyup)
+    var orderlinks = document.getElementsByClassName("order");            // allgemeine Linkbehandlung  todo: non-URL-Links klicken ans laufen bringen
+    console.log(orderlinks);
+
+    document.querySelectorAll('.order').forEach(item => {
+        let itemname = item.text.slice(1, item.text.length-1);
+        item.addEventListener('click', append(itemname));
+    })
+
+
 
     // GLOBALE VARIABLEN:
     // ==================
 
     // Links
-    //var links = document.getElementsByTagName("a");            // allgemeine Linkbehandlung  todo: non-URL-Links klicken ans laufen bringen
-    //links.onclick = openURL();
     var linkelemente = document.getElementsByClassName("links"); // Array aller Links (mit der css-Klasse links) auf der Seite
     var linknamen = [];                                                    // Array der Link-Texte, um diese als Befehl verwenden zu können
     for (let i=0; i<linkelemente.length; i++) linknamen[i] = linkelemente[i].text.slice(1, linkelemente[i].text.length-1);  // Beschneidung derer um eckige Klammern zu entfernen
@@ -70,13 +78,6 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
         document.getElementById("cmdin").value += autofills[autofillPos].slice(inputlen, autofills[autofillPos].length);
         console.log("Ergänzung von " + autofillPos+1 + ". Befehl");
         if (select) cmdin.setSelectionRange(inputlen, autofills[autofillPos].length, "backward"); // markiere die Ergänzung
-        if (shift) {                                                     // zähle die automatischen Ergänzungen rauf oder runter
-            if (autofillPos >= 0) autofillPos--;
-            else autofillPos = autofills.length-1;
-        } else {
-            if (autofillPos < autofills.length) autofillPos++;
-            else autofillPos = 0;
-        }
     }
 
     function autocompleteReset(){
@@ -126,6 +127,13 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
                     else tab++;
                     autocomplete(false);                 // Autocomplete mit Tabulator (ohne Markierung)
                 }
+                if (shift) {                                   // zähle die automatischen Ergänzungen runter oder runter
+                    if (autofillPos >= 0) autofillPos--;
+                    else autofillPos = autofills.length-1;
+                } else {
+                    if (autofillPos < autofills.length) autofillPos++;
+                    else autofillPos = 0;
+                }
                 break;
 
             case 38:
@@ -165,6 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
     // Funktionen für readCMD:
 
     function append(ID) {                                  // Textbaustein auf die Konsole schreiben
+        console.log(ID)
         let newOrder = document.getElementById(ID).cloneNode(true);
         newOrder.style.display="block";
         newOrder.className="prompted";
@@ -186,13 +195,13 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
     }
 
     function clear(){                                       // die Konsole leeren
-        var con = document.getElementById("console");
-        var toDelete = con.childNodes;
-        for(var i=toDelete.length-1; i>=0; i--){
+        let con = document.getElementById("console");
+        let toDelete = con.childNodes;
+        for(let i=toDelete.length-1; i>=0; i--){
             toDelete[i].remove();
             console.log(toDelete[i]);
         }
-        console.log("ausgabe gelöscht");
+        console.log("Ausgabe gelöscht");
     }
 
     function openURL(url){                                 // Öffnen der Seite in neuem Fenster
