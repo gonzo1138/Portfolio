@@ -21,14 +21,14 @@ html, body{
 	font-size: medium;
 }
 
-a{
+a span{
 	text-decoration: none;
 	color: #0c0;
 }
-a:visited {
+a:visited span:visited{
 	background: #ccc1;
 }
-a:focus, a:hover, a:active{
+a:focus, a:hover, a:active span:focus, span:hover, span:active{
 	background: #ccc7;
 }
 

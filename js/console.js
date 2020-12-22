@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
     console.log(orderlinks);
 
     document.querySelectorAll('.order').forEach(item => {
-        let itemname = item.text.slice(1, item.text.length-1);
-        item.addEventListener('click', append(itemname));
+        let linkname = item.id.slice(1, item.id.length);
+        item.addEventListener('click', append(linkname));
     })
 
 
