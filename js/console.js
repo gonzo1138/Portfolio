@@ -11,14 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
     cmd.addEventListener('keydown', keyhandler);                     // Eventhandler für Tastendruck
     cmd.addEventListener('keyup', shifthandler);                     // Eventhandler für das loslassen einer Taste (für den Fall dass SHIFT involviert ist)
     cmd.addEventListener('input', setinput);                         // Eventhandler für Änderung im Eingabefeld (vollständig, da auswertung nach Keyup)
-    var orderlinks = document.getElementsByClassName("order");            // allgemeine Linkbehandlung  todo: non-URL-Links klicken ans laufen bringen
-    console.log(orderlinks);
+    document.getElementsByClassName("order").onclick = function(e){
+        e.addEventListener(e.id.slice(1, item.id.length));
+    }                                                                     // allgemeine Linkbehandlung  todo: non-URL-Links klicken ans laufen bringen
 
+/*
     document.querySelectorAll('.order').forEach(item => {
         let linkname = item.id.slice(1, item.id.length);
         item.addEventListener('click', append(linkname));
     })
-
+*/
 
 
     // GLOBALE VARIABLEN:
@@ -183,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
         cmd.scrollIntoView(false);
     }
 
-    function appendCMD(cmd){                                // Befehl nach Eingabe in die Konsole schreiben
+    function appendCMD(cmd){                                // Befehlszeile in die Konsole schreiben
         let newOrder = document.getElementById("promptmessage").cloneNode(true);
         newOrder.style.display="block";
         newOrder.className="prompted";

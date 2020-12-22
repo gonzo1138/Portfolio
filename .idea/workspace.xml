@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9836b29-50e8-4ca2-b185-e8f932ef6caf" name="Default Changelist" comment="quirey or not query...">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="c9836b29-50e8-4ca2-b185-e8f932ef6caf" name="Default Changelist" comment="query or not query... now with spans">
       <change beforePath="$PROJECT_DIR$/js/console.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/console.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +84,7 @@
       <workItem from="1608301608793" duration="11589000" />
       <workItem from="1608320193456" duration="1031000" />
       <workItem from="1608541630443" duration="4411000" />
-      <workItem from="1608570225191" duration="11713000" />
+      <workItem from="1608570225191" duration="12295000" />
     </task>
     <task id="LOCAL-00001" summary="improved commenting in the code;&#10;minor improvements on autocomplete">
       <created>1608317503740</created>
@@ -103,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608639751677</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="query or not query... now with spans">
+      <created>1608677409782</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608677409782</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +128,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="improved commenting in the code;&#10;minor improvements on autocomplete" />
     <MESSAGE value="quirey or not query..." />
-    <option name="LAST_COMMIT_MESSAGE" value="quirey or not query..." />
+    <MESSAGE value="query or not query... now with spans" />
+    <option name="LAST_COMMIT_MESSAGE" value="query or not query... now with spans" />
   </component>
 </project>
