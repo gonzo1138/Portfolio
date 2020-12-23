@@ -12,22 +12,22 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
     cmd.addEventListener('keyup', shifthandler);                     // Eventhandler für das loslassen einer Taste (für den Fall dass SHIFT involviert ist)
     cmd.addEventListener('input', setinput);                         // Eventhandler für Änderung im Eingabefeld (vollständig, da auswertung nach Keyup)
                                                                           // allgemeine Linkbehandlung  todo: non-URL-Links klicken ans laufen bringen
-/*
+/*  // Klicken funktioniert nicht... keine Konsolenausgabe...
     document.getElementsByClassName("order").onclick = function(e){
         console.log(e);
         append(e.id.slice(1, e.id.length));
     }
 */
 
+/*  // Ergibt: document.getElementsByClassName(...).addEventListener is not a function
     document.getElementsByClassName("order").addEventListener('click', function(e){
         console.log(e);
         e.addEventListener(e.id.slice(1, e.id.length));
     });
+*/
 
-/*
+/*  // Klicken funktioniert nicht... keine Konsolenausgabe...
     var orderlinks = document.getElementsByClassName('order');
-    console.log(orderlinks);
-    console.log(orderlinks.length);
     for (let i = 0; i < orderlinks.length; i++) {
         (function(index) {
             console.log(orderlinks[index]);
@@ -36,12 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
     }
 */
 
-/*
+/*  // alle append-Aufrufe werden ausgeführt, links im Anschluss auch nicht klickbar
     document.querySelectorAll('.order').forEach(item => {
         console.log(item);
         item.addEventListener('click', append(item.id.slice(1, item.id.length)));
     })
 */
+
 
 
     // GLOBALE VARIABLEN:
@@ -196,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
     // Funktionen für readCMD:
 
     function append(ID) {                                  // Textbaustein auf die Konsole schreiben
-        console.log(ID + " wird auf Ausgabe geschrieben")
+        console.log(ID + " wird in Ausgabe geschrieben")
         let newOrder = document.getElementById(ID).cloneNode(true);
         newOrder.style.display="block";
         newOrder.className="prompted";
