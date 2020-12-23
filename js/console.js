@@ -12,9 +12,30 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
     cmd.addEventListener('keyup', shifthandler);                     // Eventhandler für das loslassen einer Taste (für den Fall dass SHIFT involviert ist)
     cmd.addEventListener('input', setinput);                         // Eventhandler für Änderung im Eingabefeld (vollständig, da auswertung nach Keyup)
     document.getElementsByClassName("order").onclick = function(e){
-        e.addEventListener(e.id.slice(1, item.id.length));
-    }                                                                     // allgemeine Linkbehandlung  todo: non-URL-Links klicken ans laufen bringen
+        append(e.id.slice(1, e.id.length));
+        console.log(e);
+        console.log(e.id);
+    }
 
+/*
+    var orderlinks = document.getElementsByClassName('order');
+    console.log(orderlinks);
+    console.log(orderlinks.length);
+    for (let i = 0; i < orderlinks.length; i++) {
+        (function(index) {
+            console.log(orderlinks[index]);
+            orderlinks[index].addEventListener("click", append(orderlinks[index].id.slice(1, orderlinks[index].id.length)));
+        })
+    }
+*/
+
+/*
+    document.getElementsByClassName("order").addEventListener('click', function(e){
+        e.addEventListener(e.id.slice(1, item.id.length));
+        console.log(e);
+        console.log(e.id);
+    });                                                                     // allgemeine Linkbehandlung  todo: non-URL-Links klicken ans laufen bringen
+*/
 /*
     document.querySelectorAll('.order').forEach(item => {
         let linkname = item.id.slice(1, item.id.length);
@@ -175,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
     // Funktionen für readCMD:
 
     function append(ID) {                                  // Textbaustein auf die Konsole schreiben
-        console.log(ID)
+        console.log(ID + " wird auf Ausgabe geschrieben")
         let newOrder = document.getElementById(ID).cloneNode(true);
         newOrder.style.display="block";
         newOrder.className="prompted";
