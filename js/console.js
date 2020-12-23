@@ -11,11 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
     cmd.addEventListener('keydown', keyhandler);                     // Eventhandler für Tastendruck
     cmd.addEventListener('keyup', shifthandler);                     // Eventhandler für das loslassen einer Taste (für den Fall dass SHIFT involviert ist)
     cmd.addEventListener('input', setinput);                         // Eventhandler für Änderung im Eingabefeld (vollständig, da auswertung nach Keyup)
+                                                                          // allgemeine Linkbehandlung  todo: non-URL-Links klicken ans laufen bringen
+/*
     document.getElementsByClassName("order").onclick = function(e){
-        append(e.id.slice(1, e.id.length));
         console.log(e);
-        console.log(e.id);
+        append(e.id.slice(1, e.id.length));
     }
+*/
+
+    document.getElementsByClassName("order").addEventListener('click', function(e){
+        console.log(e);
+        e.addEventListener(e.id.slice(1, e.id.length));
+    });
 
 /*
     var orderlinks = document.getElementsByClassName('order');
@@ -30,16 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
 */
 
 /*
-    document.getElementsByClassName("order").addEventListener('click', function(e){
-        e.addEventListener(e.id.slice(1, item.id.length));
-        console.log(e);
-        console.log(e.id);
-    });                                                                     // allgemeine Linkbehandlung  todo: non-URL-Links klicken ans laufen bringen
-*/
-/*
     document.querySelectorAll('.order').forEach(item => {
-        let linkname = item.id.slice(1, item.id.length);
-        item.addEventListener('click', append(linkname));
+        console.log(item);
+        item.addEventListener('click', append(item.id.slice(1, item.id.length)));
     })
 */
 

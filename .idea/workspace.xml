@@ -19,8 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9836b29-50e8-4ca2-b185-e8f932ef6caf" name="Default Changelist" comment="not query... but with spans">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c9836b29-50e8-4ca2-b185-e8f932ef6caf" name="Default Changelist" comment="ich geb auf... &gt;&lt;">
       <change beforePath="$PROJECT_DIR$/js/console.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/console.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +84,7 @@
       <workItem from="1608301608793" duration="11589000" />
       <workItem from="1608320193456" duration="1031000" />
       <workItem from="1608541630443" duration="4411000" />
-      <workItem from="1608570225191" duration="16206000" />
+      <workItem from="1608570225191" duration="17002000" />
     </task>
     <task id="LOCAL-00001" summary="improved commenting in the code;&#10;minor improvements on autocomplete">
       <created>1608317503740</created>
@@ -115,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608678303344</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ich geb auf... &gt;&lt;">
+      <created>1608681942313</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608681942313</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +144,7 @@
     <MESSAGE value="quirey or not query..." />
     <MESSAGE value="query or not query... now with spans" />
     <MESSAGE value="not query... but with spans" />
-    <option name="LAST_COMMIT_MESSAGE" value="not query... but with spans" />
+    <MESSAGE value="ich geb auf... &gt;&lt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ich geb auf... &gt;&lt;" />
   </component>
 </project>
