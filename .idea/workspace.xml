@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9836b29-50e8-4ca2-b185-e8f932ef6caf" name="Default Changelist" comment="du schaffst das...">
+    <list default="true" id="c9836b29-50e8-4ca2-b185-e8f932ef6caf" name="Default Changelist" comment="du schaffst das... später.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/console.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/console.js" afterDir="false" />
     </list>
@@ -85,7 +85,11 @@
       <workItem from="1608301608793" duration="11589000" />
       <workItem from="1608320193456" duration="1031000" />
       <workItem from="1608541630443" duration="4411000" />
-      <workItem from="1608570225191" duration="18292000" />
+      <workItem from="1608570225191" duration="19151000" />
+      <workItem from="1609437390229" duration="747000" />
+      <workItem from="1609536909316" duration="33000" />
+      <workItem from="1609537384604" duration="394000" />
+      <workItem from="1609540494709" duration="3705000" />
     </task>
     <task id="LOCAL-00001" summary="improved commenting in the code;&#10;minor improvements on autocomplete">
       <created>1608317503740</created>
@@ -129,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608754757026</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="du schaffst das... später.">
+      <created>1608755224580</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608755224580</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +165,7 @@
     <MESSAGE value="not query... but with spans" />
     <MESSAGE value="ich geb auf... &gt;&lt;" />
     <MESSAGE value="du schaffst das..." />
-    <option name="LAST_COMMIT_MESSAGE" value="du schaffst das..." />
+    <MESSAGE value="du schaffst das... später." />
+    <option name="LAST_COMMIT_MESSAGE" value="du schaffst das... später." />
   </component>
 </project>

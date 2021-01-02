@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
     cmd.addEventListener('keydown', keyhandler);                     // Eventhandler für Tastendruck
     cmd.addEventListener('keyup', shifthandler);                     // Eventhandler für das loslassen einer Taste (für den Fall dass SHIFT involviert ist)
     cmd.addEventListener('input', setinput);                         // Eventhandler für Änderung im Eingabefeld (vollständig, da auswertung nach Keyup)
-                                                                          // allgemeine Linkbehandlung  todo: non-URL-Links klicken ans laufen bringen
+
+    // Konsolen-Link-Behandlung:  todo: non-URL-Links klicken ans laufen bringen
+
 /*  // Klicken funktioniert nicht... keine Konsolenausgabe...
     document.getElementsByClassName("order").onclick = function(e){
         console.log(e);
@@ -36,13 +38,27 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
     }
 */
 
-/*  // alle append-Aufrufe werden ausgeführt, links im Anschluss auch nicht klickbar
-    document.querySelectorAll('.order').forEach(item => {
+/*  // alle append-Aufrufe werden ausgeführt, links im Anschluss aber nicht klickbar
+    document.querySelectorAll('.order').forEach((item) => {
         console.log(item);
-        item.addEventListener('click', append(item.id.slice(1, item.id.length)));
+        item.addEventListener('click', function(){
+            append(item.id.slice(1, item.id.length));
+        });
     })
 */
 
+    // angepasste nsx-Variante
+
+    function linkClicked(e){
+        alert("I'm so clicked");
+    }
+
+    var allLinks = document.querySelectorAll('span');
+    allLinks.forEach((e)=>{
+        console.log(e.id.slice(1, e.id.length));         // wird korrekt ausgeführt
+        e.addEventListener("click", linkClicked);   // wird beim click nicht ausgeführt...
+    })
+    console.log(allLinks);
 
 
     // GLOBALE VARIABLEN:
