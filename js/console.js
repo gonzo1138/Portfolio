@@ -14,51 +14,27 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
 
     // Konsolen-Link-Behandlung:  todo: non-URL-Links klicken ans laufen bringen
 
-/*  // Klicken funktioniert nicht... keine Konsolenausgabe...
-    document.getElementsByClassName("order").onclick = function(e){
-        console.log(e);
-        append(e.id.slice(1, e.id.length));
-    }
-*/
-
-/*  // Ergibt: document.getElementsByClassName(...).addEventListener is not a function
-    document.getElementsByClassName("order").addEventListener('click', function(e){
-        console.log(e);
-        e.addEventListener(e.id.slice(1, e.id.length));
-    });
-*/
-
-/*  // Klicken funktioniert nicht... keine Konsolenausgabe...
-    var orderlinks = document.getElementsByClassName('order');
-    for (let i = 0; i < orderlinks.length; i++) {
-        (function(index) {
-            console.log(orderlinks[index]);
-            orderlinks[index].addEventListener("click", append(orderlinks[index].id.slice(1, orderlinks[index].id.length)));
-        })
-    }
-*/
-
-/*  // alle append-Aufrufe werden ausgeführt, links im Anschluss aber nicht klickbar
-    document.querySelectorAll('.order').forEach((item) => {
-        console.log(item);
-        item.addEventListener('click', function(){
-            append(item.id.slice(1, item.id.length));
+    var orderlinks = document.querySelectorAll('.order');
+    console.log(orderlinks);
+    orderlinks.forEach((item)=>{
+        //console.log(item.id);   // check
+        item.addEventListener('click', function(event){
+            console.log(event.target.id);
+            alert(event.target.id);
+            //append(event.target.id.slice(1, event.target.id.length));
         });
-    })
-*/
+    });
 
-    // angepasste nsx-Variante
-
-    function linkClicked(e){
-        alert("I'm so clicked");
-    }
-
-    var allLinks = document.querySelectorAll('span');
-    allLinks.forEach((e)=>{
-        console.log(e.id.slice(1, e.id.length));         // wird korrekt ausgeführt
-        e.addEventListener("click", linkClicked);   // wird beim click nicht ausgeführt...
-    })
-    console.log(allLinks);
+    /*    // Event-Bubbling-Ansatz:
+        const allLinks = document.querySelector('.orders');
+        body.addEventListener('click', event => {
+            if (event.target !== allLinks) {
+                return;
+            }
+                console.log(event);
+                alert("I'm so clicked");
+        })
+    */
 
 
     // GLOBALE VARIABLEN:
