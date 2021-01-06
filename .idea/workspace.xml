@@ -21,9 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c9836b29-50e8-4ca2-b185-e8f932ef6caf" name="Default Changelist" comment="added eventbubbling-variation.&#10;no succsess so far.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/console.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/console.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +91,7 @@
       <workItem from="1609537384604" duration="394000" />
       <workItem from="1609540494709" duration="13900000" />
       <workItem from="1609761963870" duration="1672000" />
+      <workItem from="1609763907055" duration="3105000" />
     </task>
     <task id="LOCAL-00001" summary="improved commenting in the code;&#10;minor improvements on autocomplete">
       <created>1608317503740</created>
@@ -150,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609623533447</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="solution found, but not yet implemented: whilst copying the divs to the console-output, the eventlistener stays behind... solution: either setting eventlistener after copying, or switching to event-bubbling... to be contiuned...">
+      <created>1609764080501</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609764080501</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +183,7 @@
     <MESSAGE value="du schaffst das..." />
     <MESSAGE value="du schaffst das... später." />
     <MESSAGE value="added nsx-variation.&#10;no succsess so far." />
-    <option name="LAST_COMMIT_MESSAGE" value="added nsx-variation.&#10;no succsess so far." />
+    <MESSAGE value="solution found, but not yet implemented: whilst copying the divs to the console-output, the eventlistener stays behind... solution: either setting eventlistener after copying, or switching to event-bubbling... to be contiuned..." />
+    <option name="LAST_COMMIT_MESSAGE" value="solution found, but not yet implemented: whilst copying the divs to the console-output, the eventlistener stays behind... solution: either setting eventlistener after copying, or switching to event-bubbling... to be contiuned..." />
   </component>
 </project>
