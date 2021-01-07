@@ -18,7 +18,7 @@ html, body{
 	background-color:#000000;
 	font-family: Roboto-mono, monospace;
 	color: #009000;
-	font-size: medium;
+	font-size: 12px;
 }
 
 a, span{
@@ -42,7 +42,7 @@ input{
 	background-color: #00000000;
 	font-family: Roboto-mono, monospace;
 	color: #009000;
-	font-size: medium;
+	/*font-size: medium;*/
 	border: 0px;
 	margin: 0px;
 	outline: none;
@@ -61,41 +61,40 @@ table{
 	height: 200px;
 }
 
-#consolewindow{
+#consolemachine{
 	position: absolute;
-	width: 699px;
-	height: 400px;
+	width: 1000px;
+	height: 667px;
 	margin-left: 100px;
 
-
-	background-color: #ccc1;
-	transform-origin: left;
-	transform: perspective(699px) rotateY(7deg);
-	
-}
-
-#consoleheader{
-	width: 100%;
-	height: 34px;
-	top: 0px;
-	background-image: url("../pic/cmd_head.png");
-	background-size: auto;
-	background-position-y: 0px;
+	/*
+        background-color: #ccc1;
+        transform-origin: left;
+        transform: perspective(699px) rotateY(7deg);*/
+	background-image: url("../pic/VT05-.png");
 	background-repeat: no-repeat;
-	background-color: #ccc1;
+}
+#consoleoverlay{
+	position: absolute;
+	width: 1000px;
+	height: 667px;
+	margin-left: 100px;
+	background-image: url("../pic/VT05-_screen2.png");
+	background-repeat: no-repeat;
+	opacity: 0.5;
 }
 
 #consoleframe{
-	width: 100%;
-	height: 368px;
-	background: #ccc0;
+	width: 333px;
+	height: 200px;
 	position: absolute;
-	bottom: 0px;
+	top: 152px;
+	left: 333px;
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
 	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow-y: hidden;
 }
 
 #console{

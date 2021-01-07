@@ -6,7 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
     // EVENTHANDLER:
     // =============
 
-    document.getElementById('consoleframe').addEventListener('click', setFocus);	// Focus bei Klick auf Konsolen-Fenster immer auf Befehlseingabefeld
+    //document.getElementById('consoleoverlay').addEventListener('click', setFocus);	// Focus bei Klick auf Konsolen-Fenster immer auf Befehlseingabefeld
+    document.getElementById('consoleoverlay').addEventListener('click', function(e){
+        document.getElementById('consoleoverlay').style.display = "none";
+    });	// Focus bei Klick auf Konsolen-Fenster immer auf Befehlseingabefeld
+    document.getElementById('consolemachine').addEventListener('click', setFocus);	// Focus bei Klick auf Konsolen-Fenster immer auf Befehlseingabefeld
     var cmd = document.getElementById('cmd');                    // Eingabeformular-Objekt
     cmd.addEventListener('keydown', keyhandler);                     // Eventhandler für Tastendruck
     cmd.addEventListener('keyup', shifthandler);                     // Eventhandler für das loslassen einer Taste (für den Fall dass SHIFT involviert ist)
@@ -180,9 +184,11 @@ document.addEventListener('DOMContentLoaded', function() {   // als Eventhandler
                 break;
 
             default:
+                /*
                 if (input.length > 2) {
                     autocomplete(true);         // Autocomplete bei Eingabe von mehr als 2 Buchstaben (mit Markierung)
                 }
+                */
         }
     }
 
